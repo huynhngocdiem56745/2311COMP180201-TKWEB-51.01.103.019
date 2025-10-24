@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"content="ie=edge">
+        <link rel="stylesheet" href="mystyle.css">
+        <title>Hồ cá vui nhộn </title>
+    </head>
+<body>
+    <div class="container">
+
+        <div class="aquarium">
+            <div class="bg"></div>
+            <div class="light">
+                <span class="light-1"></span>
+                <span class="light-2"></span>
+                <span class="light-3"></span>
+            </div>
+            <div class="water"></div>
+            <div class="border"></div>
+            <div class="border border-top"></div>
+            <div class="border border-bottom"></div>
+            <div class="fish fish-1"></div>
+            <div class="fish fish-2"></div>
+            <div class="fish fish-3"></div>
+            <div class="fish fish-4"></div>
+              
+            
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    <div id="controls">
+          <button id="musicBtn">Phát nhạc</button>
+        </div>
+
+        <audio id="bgMusic" loop>
+        <source src="amthanhvuinhon.mp3" />
+        </audio>
+        <script>
+  const btnMusic = document.getElementById('musicBtn');
+  const audio = document.getElementById('bgMusic');
+
+  btnMusic.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btnMusic.textContent = 'Tạm dừng nhạc ';
+    } else {
+      audio.pause();
+      btnMusic.textContent = 'Phát nhạc';
+    }
+  });
+</script>
+</body>
+</html>
